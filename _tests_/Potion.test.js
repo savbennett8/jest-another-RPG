@@ -6,7 +6,7 @@ test('creates a health potion object', () => {
     //Capitalization of 'Potion' indicates it's a constructor funciton
     const potion = new Potion('health');
 
-    expect(potion.name).toBe('health');
+    expect(potion.name).toStrictEqual('health');
     //'expect.any()' method takes a constructor as an argument
-    expect(potion.value).toBe(expect.any(Number));
+    expect(potion.value).toStrictEqual(expect.any(Number));
 });
