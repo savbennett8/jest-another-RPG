@@ -9,4 +9,13 @@ test('creates a health potion object', () => {
     expect(potion.name).toStrictEqual('health');
     //'expect.any()' method takes a constructor as an argument
     expect(potion.value).toStrictEqual(expect.any(Number));
+    //.toBe kept failing my test, used .toStrictEqual instead
+});
+
+test('creates a random potion object', () => {
+    const potion = new Potion();
+
+    expect(potion.name).toEqual(expect.any(String));
+    expect(potion.name.length).toBeGreaterThan(0);
+    expect(potion.value).toEqual(expect.any(Number));
 });
