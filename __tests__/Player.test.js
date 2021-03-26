@@ -52,18 +52,17 @@ test('checks if player is alive or not', () => {
 });
 
 
-test("subtracts from player's health", () => {
+test('subtracts from players health', () => {
     const player = new Player('Dave');
     const oldHealth = player.health;
 
     player.reduceHealth(5);
 
-    expect(player.health).toStrictEqual(oldHealth - 5);
-    //test fail bc '.toBe' '.toStrictEqual' nothing i do is working
+    expect(player.health).toBe(oldHealth - 5);
 
     player.reduceHealth(99999);
 
-    expect(player.health).toEqual(0);
+    expect(player.health).toBe(0);
 });
 
 //verifies the player's attack value is within range
